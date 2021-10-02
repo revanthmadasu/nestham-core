@@ -1,0 +1,4 @@
+mongodb+srv://revanth:<password>@cluster0.krgqb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+mongodb user = revanth
+mongodb password = I_build_apps_97

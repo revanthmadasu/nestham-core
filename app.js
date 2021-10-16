@@ -37,6 +37,6 @@ app.use(function(err, req, res, next) {
 });
 
 // Start the server on port 3000
-app.listen(3000, '127.0.0.1', () => console.log('Running on 127.0.0.1:3000'));
+// app.listen(3000, '127.0.0.1', () => console.log('Running on 127.0.0.1:3000'));
 
 module.exports = app;

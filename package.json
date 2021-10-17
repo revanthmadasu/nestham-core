@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "packages": "npm i"
+    "start": "nodemon ./bin/www.js",
+    "packages": "npm i",
+    "deploy": "serverless deploy"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,12 +14,16 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "mongodb": "^4.0.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "aws-serverless-express": "^3.4.0",
+    "serverless": "^2.63.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.83",
     "@types/lodash": "^4.14.175",
     "@types/node": "^16.10.2",
-    "nodemon": "^2.0.13"
+    "aws-serverless-express": "^3.4.0",
+    "nodemon": "^2.0.13",
+    "serverless": "^2.63.0"
   }
 }

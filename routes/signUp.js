@@ -2,7 +2,7 @@ const { DB_NAMES, COLLECTION_NAMES } = require('../constants/db-collections.cons
 const { STATUS, STATUS_MESSAGES, STATUS_CODE } = require('../constants/util.constants');
 const mongoClient = require('../helpers/mongoClient');
 const { getFormattedResponse } = require('../helpers/response-format');
-
+const { isValidPassword } = require('../helpers/utils')
 module.exports = {
     async createUser(req, res) {
         const reqBody = req.body;
@@ -19,7 +19,7 @@ module.exports = {
             following: [],
             posts: []
         };
-        if (!isValidPassword()) {
+        if (!isValidPassword(user.password)) {
             res.send(getFormattedResponse(STATUS.ERROR, {message: "Password format is not proper"}, STATUS_MESSAGES.CLIENT_ERROR, STATUS_CODE.CLIENT_ERROR));
             return;
         }

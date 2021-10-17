@@ -1,5 +1,8 @@
-function isValidPassword(password) {
-    if (!password) {
-        return false;
+module.exports = {
+    isValidPassword(password) {
+        if (!password) {
+            return false;
+        }
+        return true;
     }
 }

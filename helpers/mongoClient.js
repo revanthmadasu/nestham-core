@@ -1,4 +1,5 @@
 const { MongoClient } = require('mongodb');
+const  { environment } = require('../environment/environment');
 
 let client;
 
@@ -8,7 +9,7 @@ function isConnected() {
 
 const checkClient = async () => {
     const createClient = async () => {
-        const uri = 'mongodb+srv://revanth:I_build_apps_97@cluster0.krgqb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+        const uri = environment.database;
 
         console.log('Creating mongodb client');
         try {
